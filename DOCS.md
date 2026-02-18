@@ -32,12 +32,12 @@ See [utils.js](https://github.com/ntkhang03/Goat-Bot-V2/blob/main/utils.js) for 
 * Basic usages:<br />
 
 <details>
-        <summary>
-                <b><i>Users</i></b>
-        </summary>
-        <i>see more details at <a href="https://github.com/ntkhang03/Goat-Bot-V2/blob/main/database/controller/usersData.js">usersData.js</a></i>
-        <br />
-        <br />
+	<summary>
+		<b><i>Users</i></b>
+	</summary>
+	<i>see more details at <a href="https://github.com/ntkhang03/Goat-Bot-V2/blob/main/database/controller/usersData.js">usersData.js</a></i>
+	<br />
+	<br />
 
 ```javascript
 // CREATE USER DATA
@@ -61,27 +61,27 @@ await usersData.set(4, { banned: true }, "data");
 //   set data without path
 const userData = await usersData.get(userID);
 userData.data = {
-        banned: true
+	banned: true
 };
 await usersData.set(4, {
-        data: userData.data
+	data: userData.data
 });
 
 // Example 2
 // set data with path
 await usersData.set(4, {
-        name: "ABC",
-        birthday: "01/01/1999"
+	name: "ABC",
+	birthday: "01/01/1999"
 }, "data.relationship.lover");
 
 // set data without path
 const userData = await usersData.get(userID);
 userData.data.relationship.lover = {
-        name: "ABC",
-        birthday: "01/01/1999"
+	name: "ABC",
+	birthday: "01/01/1999"
 };
 await usersData.set(4, {
-        data: userData.data
+	data: userData.data
 });
 ```
 
@@ -97,8 +97,8 @@ const avatarUrl = await usersData.getAvatarUrl(userID);
 
 // REFRESH INFO USER
 await usersData.refreshInfo(userID, updateData);
-// updateData is data get by api.getUserInfo(userID)[userID] method or undefined is auto
-// refresh data gender, name, vanity of the user
+// updateData is data get by api.getUserInfo(userID)[userID] method or undefined is auto 
+// refresh data gender, name, vanity of the user 
 
 // REMOVE USER DATA
 await usersData.remove(4);
@@ -107,12 +107,12 @@ await usersData.remove(4);
 
 
 <details>
-        <summary>
-                <b><i>Threads</i></b>
-        </summary>
-        <i>see more details at <a href="https://github.com/ntkhang03/Goat-Bot-V2/blob/main/database/controller/threadsData.js">threadsData.js</a></i>
-        <br />
-        <br />
+	<summary>
+		<b><i>Threads</i></b>
+	</summary>
+	<i>see more details at <a href="https://github.com/ntkhang03/Goat-Bot-V2/blob/main/database/controller/threadsData.js">threadsData.js</a></i>
+	<br />
+	<br />
 
 ```javascript
 // CREATE THREAD DATA
@@ -143,14 +143,14 @@ await threadsData.set(2000000000000000, "Helo", "data.welcomeMessage");
 const threadData = await threadsData.get(2000000000000000);
 threadData.data.welcomeMessage = "Hello";
 await threadData.set(2000000000000000, {
-        data: threadData.data
+	data: threadData.data
 });
 ```
 
 ```javascript
 // REFRESH THREAD DATA
 await threadsData.refreshInfo(threadID, threadInfo);
-// threadInfo is data get by api.getThreadInfo(threadID) method or undefined is auto
+// threadInfo is data get by api.getThreadInfo(threadID) method or undefined is auto 
 // refresh data threadName, threadThemeID, emoji, adminIDs, imageSrc and members of thread
 ```
 </details>
@@ -175,9 +175,9 @@ await threadsData.refreshInfo(threadID, threadInfo);
 
 * Reference from available commands: [cmds](https://github.com/ntkhang03/Goat-Bot-V2/tree/main/scripts/cmds) and [events](https://github.com/ntkhang03/Goat-Bot-V2/tree/main/scripts/events)
 * See example at for command [here](https://github.com/ntkhang03/Goat-Bot-V2/blob/main/scripts/cmds/newcommand.eg.js), for event [here](https://github.com/ntkhang03/Goat-Bot-V2/blob/main/scripts/events/newcommandevent.eg.js)
-* Or if using vscode you can create new command with snippets
+* Or if using vscode you can create new command with snippets 
   `GoatBotCommandCreate` or `GoatBotEventCreate` (press <kbd>tab</kbd> to jump to next placeholder)
 
-        <img src="https://i.ibb.co/VTstrSy/Animation.gif" width="400px" />
+	<img src="https://i.ibb.co/VTstrSy/Animation.gif" width="400px" />
 
 ## 🚀 **Updating...**
